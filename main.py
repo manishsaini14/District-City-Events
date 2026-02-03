@@ -14,18 +14,18 @@ def run(city):
 
     upsert_events(events)
 
-    print("Excel updated ✅")
+    print("Excel updated!")
 
 
 def main():
-    # 👇 USER SE CITY INPUT
+    # USER SE CITY INPUT
     city = input("Enter city name: ").strip()
 
     if not city:
         print("❌ City name is required")
         return
 
-    # 🔥 run forever every 2 minutes
+    # run forever every 2 minutes
     while True:
         run(city)
 
@@ -35,3 +35,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
