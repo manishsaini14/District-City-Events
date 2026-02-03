@@ -69,11 +69,12 @@ def upsert_events(events):
     mark_expired(ws, seen_ids)
 
     wb.save(FILE)
-    print("Excel updated successfully ✅")
+    print("Excel updated successfully!")
 
 
 def mark_expired(ws, seen_ids):
     for row in ws.iter_rows(min_row=2):
         eid = row[0].value
         if eid not in seen_ids:
+
             row[7].value = "Expired"
